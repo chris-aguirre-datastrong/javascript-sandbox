@@ -79,8 +79,8 @@ function loop() {
   ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
   ctx.fillRect(0, 0, width, height);
 
-  while (balls.length < 10) {
-    var size = random(10,100);
+  while (balls.length < 100) {
+    var size = random(10,9988);
     var ball = new Ball(
       // ball position always drawn at least one ball width
       // away from the edge of the canvas, to avoid drawing errors
@@ -97,7 +97,7 @@ function loop() {
   for (var i = 0; i < balls.length; i++) {
     balls[i].draw();
     balls[i].update();
-    balls[i].collisionDetect();
+    //balls[i].collisionDetect();
   }
 
   requestAnimationFrame(loop);
